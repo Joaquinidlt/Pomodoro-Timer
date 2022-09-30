@@ -13,11 +13,11 @@ Translated with www.DeepL.com/Translator (free version)
 
 
 
-!<p align="centre">
+!<p align="center">
   <img height="500" src="./screens/Screen-pomodoro-desktop.png" />
 </p>
 
 
-!<p align="centre">
+!<p align="center">
   <img height="500" src="./screens/Screens-pomodoro-phone.png" />
 </p>
