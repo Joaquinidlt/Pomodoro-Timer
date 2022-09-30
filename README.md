@@ -1,7 +1,8 @@
 # Pomodoro-Timer
 
+- App resposive (JavaScript, HTML, CSS)
 
-## Objetivos del Proyecto
+### Pomodoro Technique
 
 The Pomodoro technique consists of dividing the time spent studying into 25-minute intervals called pomodoros. These intervals are separated by pauses that also have a fixed duration.
 
