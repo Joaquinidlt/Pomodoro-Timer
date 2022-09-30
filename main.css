@@ -18,15 +18,28 @@ body {
     border: solid 1px var(--gray);
     padding: 20px;
 }
+.title-app {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    padding: 15px;
+    color: var(--light);
+    text-decoration: underline;
+}
 
 #time {
     text-align: center;
     padding: 20px 0;
+    color: var(--light);
 }
 
 #time #value {
     font-size: 48px;
     font-weight: bolder;
+}
+
+#taskName {
+    color: var(--light);
 }
 
 .form {
@@ -36,16 +49,22 @@ body {
 
 input[type="text"] {
     padding:10px;
-    border:solid 1px var(--gray);
-    width: 300px;
+    border:solid 2px var(--gray);
+    width: 370px;
+    border-radius: 5px;
+    background-color: var(--light);
 }
 
-button, input[type="submit"] {
+input[type="submit"] {
     border-color: var(--light);
     background-color: var(--dark);
     color: var(--light);
-    padding: 10px;
+    padding: 9px;
     border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--darker);
 }
 
 #tasks {
@@ -59,16 +78,62 @@ button, input[type="submit"] {
     display: flex;
     gap: 10px;
     align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--darker);
+    border:solid 1px var(--gray);
+    border-radius: 5px;
 }
 
-.task .completed {
+
+.completed {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.title {
+    color: var(--light);
+    padding-left: 8px;
+}
+.start-button {
+    background-color: var(--dark);
+    color: var(--light);
+    border-color: var(--dark);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.start-button:hover{
+    background-color: var(--darker);
 }
 
 .done {
     display: inline-block;
     padding: 5px;
-    background-color: var(--light);
+    padding-right: 10px;
+    color: rgb(105, 233, 105);
+}
+
+
+@media only screen and (max-width: 560px){
+    #app {
+        width: 80%;
+        border: solid 1px var(--gray);
+        padding: 20px;
+    }
+    input[type="text"] {
+        padding:10px;
+        border:solid 2px var(--gray);
+        width: 57%;
+        border-radius: 5px;
+        background-color: var(--light);
+    }
+    
+    input[type="submit"] {
+        border-color: var(--light);
+        background-color: var(--dark);
+        color: var(--light);
+        padding: 8px;
+        border-radius: 5px;
+    }
 }

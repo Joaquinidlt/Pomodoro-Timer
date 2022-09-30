@@ -37,11 +37,12 @@ function renderTasks() {
     const html = tasks.map((task) => { // con esto, cada uno de mis arreglos en tasks va a tener este "html"
         return `
             <div class="task">
+                <div class="title">${task.title}</div>
                 <div class="completed">${task.completed
-                ? `<span class="done">Done</span>`
+                ? `<span class="done">Done!</span>`
                 : `<button class="start-button" data-id="${task.id}">Start</button>`
             }</div>
-                <div class="title">${task.title}</div>
+                
             </div>
         `;
     });
@@ -63,7 +64,7 @@ function renderTasks() {
 }
 
 function startButtonHandler(id) {
-    time = 5;
+    time = 3;
     current = id; // A nuestra variable "current" va a almacenar nuestro "id" de la actividad actual
     const taskIndex = tasks.findIndex((task) => task.id === id); // aca busco el task que tiene el "id" que estoy recibiendo como parametro, lo almaceno en "taskIndex".
 
@@ -102,7 +103,7 @@ function markCompleted(id) {
 
 function startBreak() {
     time = 3;
-    taskName.textContent = 'Break';
+    taskName.textContent = 'Break!';
     renderTime();
     timerBreak = setInterval(() => {
         timerBreakHandler();
